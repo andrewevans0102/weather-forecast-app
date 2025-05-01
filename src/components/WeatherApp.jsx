@@ -157,6 +157,11 @@ const WeatherApp = () => {
           </button>
         </div>
 
+        {/* Added city name display */}
+        <div className="selected-city">
+          <h2>Weather for {selectedCity}</h2>
+        </div>
+
         {loading && <div className="loading-message">Loading weather data...</div>}
 
         {error && (
