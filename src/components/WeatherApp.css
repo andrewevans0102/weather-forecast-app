@@ -1,0 +1,203 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Container and app layout */
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+    padding: 1rem;
+  }
+  
+  .weather-app {
+    max-width: 64rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #01579b;
+  }
+  
+  /* Controls section */
+  .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .city-select-container {
+    width: 100%;
+  }
+  
+  .city-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: white;
+  }
+  
+  .units-toggle {
+    padding: 0.5rem 1rem;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .units-toggle:hover {
+    background-color: #0277bd;
+  }
+  
+  /* Loading and error states */
+  .loading-message {
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Forecast grid */
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Forecast cards */
+  .forecast-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+  }
+  
+  .forecast-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .forecast-date {
+    font-weight: 500;
+    color: #01579b;
+  }
+  
+  .forecast-icon {
+    margin: 0.5rem 0;
+  }
+  
+  .weather-condition {
+    color: #455a64;
+  }
+  
+  .forecast-temps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .temp-high {
+    font-weight: bold;
+    color: #e53935;
+  }
+  
+  .temp-low {
+    color: #1e88e5;
+  }
+  
+  /* Weather icons */
+  .weather-icon {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .sun {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FDB813' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='5'%3E%3C/circle%3E%3Cline x1='12' y1='1' x2='12' y2='3'%3E%3C/line%3E%3Cline x1='12' y1='21' x2='12' y2='23'%3E%3C/line%3E%3Cline x1='4.22' y1='4.22' x2='5.64' y2='5.64'%3E%3C/line%3E%3Cline x1='18.36' y1='18.36' x2='19.78' y2='19.78'%3E%3C/line%3E%3Cline x1='1' y1='12' x2='3' y2='12'%3E%3C/line%3E%3Cline x1='21' y1='12' x2='23' y2='12'%3E%3C/line%3E%3Cline x1='4.22' y1='19.78' x2='5.64' y2='18.36'%3E%3C/line%3E%3Cline x1='18.36' y1='5.64' x2='19.78' y2='4.22'%3E%3C/line%3E%3C/svg%3E");
+  }
+  
+  .cloud {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23B3B3B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .rain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234299E1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='16' y1='13' x2='16' y2='21'%3E%3C/line%3E%3Cline x1='8' y1='13' x2='8' y2='21'%3E%3C/line%3E%3Cline x1='12' y1='15' x2='12' y2='23'%3E%3C/line%3E%3Cpath d='M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .snow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23A5DFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25'%3E%3C/path%3E%3Cline x1='8' y1='16' x2='8.01' y2='16'%3E%3C/line%3E%3Cline x1='8' y1='20' x2='8.01' y2='20'%3E%3C/line%3E%3Cline x1='12' y1='18' x2='12.01' y2='18'%3E%3C/line%3E%3Cline x1='12' y1='22' x2='12.01' y2='22'%3E%3C/line%3E%3Cline x1='16' y1='16' x2='16.01' y2='16'%3E%3C/line%3E%3Cline x1='16' y1='20' x2='16.01' y2='20'%3E%3C/line%3E%3C/svg%3E");
+  }
+  
+  .lightning {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238B5CF6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9'%3E%3C/path%3E%3Cpolyline points='13 11 9 17 15 17 11 23'%3E%3C/polyline%3E%3C/svg%3E");
+  }
+  
+  .fog {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23D1D5DB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z'%3E%3C/path%3E%3Cpath d='M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z'%3E%3C/path%3E%3Cpath d='M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z'%3E%3C/path%3E%3Cpath d='M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z'%3E%3C/path%3E%3Cpath d='M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .wind {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2393C5FD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  /* Responsive design */
+  @media (min-width: 640px) {
+    .controls {
+      flex-direction: row;
+    }
+    
+    .city-select-container {
+      width: 16rem;
+    }
+    
+    .forecast-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .weather-container {
+      padding: 2rem;
+    }
+    
+    .forecast-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .forecast-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
