@@ -1,0 +1,24 @@
+# Build directory
+dist
+build
+
+# Node modules
+node_modules
+
+# Log files
+*.log
+
+# Coverage directory
+coverage
+
+# Environment variables
+.env
+.env.*
+
+# Vite config
+vite.config.js
+
+# Package lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
