@@ -1,12 +1,9 @@
-# React + Vite
+# Weather Forecast App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a companion app that I have used in my upcoming LogRocket post on building web applications with [Claude](https://claude.ai/). I built this application with Claude and you can see the progressive changes done through the Git commits.
 
-Currently, two official plugins are available:
+The project is a React application that uses [OpenWeatherMap](https://openweathermap.org/) to provide a weather forecast for select cities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project consists of one page with a dropdown that allows you to select specific cities to display a weather forecast.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The project was built with [Vite](https://vite.dev/guide/#scaffolding-your-first-vite-project) and also use [Prettier](https://prettier.io/docs/) for formatting.
