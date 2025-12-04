@@ -1,6 +1,6 @@
 # Weather Forecast App
 
-This is a companion app that I have used in my upcoming LogRocket post on building web applications with [Claude](https://claude.ai/). I built this application with Claude and you can see the progressive changes done through the Git commits.
+This is a companion app that I have used in my LogRocket post [How to use Claude to build a web app](https://blog.logrocket.com/claude-web-app/) on building web applications with [Claude](https://claude.ai/). I built this application with Claude and you can see the progressive changes done through the Git commits.
 
 The project is a React application that uses [OpenWeatherMap](https://openweathermap.org/) to provide a weather forecast for select cities.
 
